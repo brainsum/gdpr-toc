@@ -1,4 +1,4 @@
-# Project Title
+# GDPR Table of Content
 
 Scraper and website consisting a Table of content for the REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL page of the EU - GDPR
 
