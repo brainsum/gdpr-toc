@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^inc/.*$ - [F,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?lang=$1 [QSA,L]

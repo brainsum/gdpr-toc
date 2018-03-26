@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GDPR TOC</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="page-main">
+  <div id="page-wrapper">
+    <div id="page-content">
+      <div class="left">
+        <div class="gdpr-title">
+          <h1>REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL</h1>
+        </div>
+        <div id="gdpr-lang">
+          <form action="" method="post">
+            <label for="url">Language</label><br>
+            <select name="languages" id="languages">
+              <option value="0">Select a Language</option>!{ options }
+            </select>
+          </form>
+        </div>
+        <div id="gdpr-toc">
+          <div class="title">
+            <h2>Table of Content</h2>
+          </div>
+          <div class="content">!{toc}</div>
+        </div>
+      </div>
+      <div class="right">
+        <iframe src="" name="eurlex" id="eurlex" sandbox></iframe>
+      </div>
+    </div>
+  </div>
+  <script>var GDPR = GDPR || {}; GDPR.lang = 'en'; GDPR.baseURL = 'http://localhost:3000/';</script>
+  <script src="js/main.js"></script>
+</body>
+</html>
