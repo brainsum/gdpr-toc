@@ -136,7 +136,7 @@ class GDPR {
           toclist += '<ul>\n';
           for (let articleId in chapter.articles) {
             let article = chapter.articles[articleId];
-            toclist += `<li><a href="${this.url}#${article.id}" target="_blank">${article.title}</a></li>\n`;
+            toclist += `<li><a href="${this.url}#${article.id}" target="_blank">${article.title} - (${article.type})</a></li>\n`;
           }
           toclist += '</ul>\n';
         }
@@ -144,13 +144,12 @@ class GDPR {
           toclist += '<ul>\n';
           for (let sectionId in chapter.sections) {
             let section = chapter.sections[sectionId];
-            // toclist += '<li>' + section.name + '\n';
             toclist += `<li><a href="${this.url}#${section.id}" target="_blank">${section.name}</a>\n`;
             if(section.articles) {
               toclist += '<ul>\n';
               for (let articleId in section.articles) {
                 let article = section.articles[articleId];
-                toclist += `<li><a href="${this.url}#${article.id}" target="_blank">${article.title}</a></li>\n`;
+                toclist += `<li><a href="${this.url}#${article.id}" target="_blank">${article.title} - (${article.type})</a></li>\n`;
               }
               toclist += '</ul>\n';
             }
