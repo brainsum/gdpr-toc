@@ -14,36 +14,44 @@ include 'inc/translations.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?php echo $translations[$language]['title'] ?></title>
-  <base href="<?php echo BASE_URL ?>" target="_blank">
   <link rel="stylesheet" href="public/css/main.css">
 </head>
 <body id="page-main">
   <div id="page-wrapper">
     <div id="page-content">
-    <div class="left">
-      <div class="gdpr-title">
-        <h1><?php echo $translations[$language]['gdpr'] ?></h1>
-      </div>
-      <div id="gdpr-lang">
-        <form action="" method="post">
-          <select name="languages" id="languages">
-            <option value="0"><?php echo $translations[$language]['select_lang'] ?></option>
-            <option value="hu">HU</option>
-            <option value="en">EN</option>
-          </select>
-        </form>
-      </div>
-      <div id="gdpr-toc">
+      <div class="left">
         <div class="title">
           <h2><?php echo $translations[$language]['toc'] ?></h2>
         </div>
-        <div class="content">
-          <?php include './inc/parts/toc_'.$language.'.html'; ?>
+        <div id="gdpr-lang">
+          <form action="" method="post">
+            <select name="languages" id="languages">
+              <option value="0"><?php echo $translations[$language]['select_lang'] ?></option>
+              <option value="hu">HU</option>
+              <option value="en">EN</option>
+            </select>
+          </form>
+        </div>
+        <div id="gdpr-toc">   
+          <div class="content">
+            <?php include './inc/parts/toc_'.$language.'.html'; ?>
+          </div>
         </div>
       </div>
+      <div class="right">
+        <div class="gdpr-title">
+          <h1><?php echo $translations[$language]['gdpr'] ?></h1>
+          <a href="#">(See the original website &raquo;)</a>
+        </div>
+        <span class="border">
+          <iframe src="" name="eurlex" id="eurlex" sandbox=""></iframe>
+        </span>
+      </div>
     </div>
-    <div class="right">
-      <iframe src="" name="eurlex" id="eurlex" sandbox=""></iframe>
+    <div id="page-footer">
+      <div class="brainsum-loves-gdpr">
+        <p>Made with<img src="public/img/icon_heart.svg" alt="Love" class="icon heart">by Brainsum</p>
+      </div>
     </div>
   </div>
   <script>var GDPR = GDPR || {}; GDPR.lang = '<?php echo $language ?>'; GDPR.baseURL = '<?php echo BASE_URL ?>';</script>

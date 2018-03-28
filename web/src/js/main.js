@@ -16,7 +16,7 @@ functions.ready(() => {
       window.frames['eurlex'].location = event.target.href;
     }
     
-    event.preventDefault();
+    event.preventDefault(); 
     return false;
   });
 
