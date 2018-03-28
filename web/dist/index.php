@@ -26,7 +26,6 @@ include 'inc/translations.php';
       </div>
       <div id="gdpr-lang">
         <form action="" method="post">
-          <label for="url"><?php echo $translations[$language]['select_lang'] ?></label><br>
           <select name="languages" id="languages">
             <option value="0"><?php echo $translations[$language]['select_lang'] ?></option>
             <option value="hu">HU</option>

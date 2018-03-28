@@ -17,18 +17,19 @@ gulp.task('default', ['sync'], function() {
   gulp.watch('src/scss/*.scss', ['sass']).on('change', () => reload());
   gulp.watch('src/img/*', ['img']).on('change', () => reload());
 
-  gulp.watch('*.js').on('change', () => reload());
-  gulp.watch('modules/*.js').on('change', () => reload());
+  gulp.watch(['dist/index.php', 'dist/inc/**/*']).on('change', () => reload());
 });
 
-gulp.task('js', function(done) {
-  gulp.src('js/main.js',{read:false})
-  .pipe(parcel({outDir: '../dist/public/js', sourceMaps: true, minify: false}, {source: 'build'})); // dev
-  // .pipe(parcel({outDir: '../dist/public/js'}, {source: 'build'})); // prod
-});
+gulp.task('js', function() {
+  exec('parcel build src/js/main.js --out-dir dist/public/js', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    reload();
+  });
+}); 
 
 gulp.task('sass', function (done) {
-  return gulp.src('scss/*.scss')
+  return gulp.src('src/scss/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
@@ -44,17 +45,17 @@ gulp.task('sass', function (done) {
       }
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('../dist/public/css'));
+    .pipe(gulp.dest('dist/public/css'));
 });
 
 gulp.task('img', function (done) {
-    return gulp.src('img/*')
+    return gulp.src('src/img/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('../dist/public/images'));
+        .pipe(gulp.dest('dist/public/img'));
 });
 
 gulp.task('sync', function() {
   browserSync.init({
-      proxy: "http://localhost:8080"
+      proxy: "http://gdpr-toc.localhost/"
   });
 });
