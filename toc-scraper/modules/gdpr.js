@@ -26,7 +26,7 @@ class GDPR {
   findLanguageFile(lang) {
 
     return new Promise((resolve, reject) => {
-      fs.readdir(path.join(process.cwd(), 'html'), (err, files) => {
+      fs.readdir(path.join(__basedir, 'html'), (err, files) => {
 
         if(err) {
           reject('File not found');
@@ -47,7 +47,7 @@ class GDPR {
 
     return new Promise((resolve, reject) => {
       
-      fs.readFile(path.join(process.cwd(), 'html', filename), 'utf-8', (err, data) => {
+      fs.readFile(path.join(__basedir, 'html', filename), 'utf-8', (err, data) => {
 
         // Scraping data
         let scrape = scrapeIt.scrapeHTML(data, {
