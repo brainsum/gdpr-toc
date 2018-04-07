@@ -13,15 +13,15 @@ const reload = browserSync.reload;
  
 
 gulp.task('default', ['sync'], function() {
-  gulp.watch('src/js/main.js', ['js']);
-  gulp.watch('src/scss/*.scss', ['sass']).on('change', () => reload());
-  gulp.watch('src/img/*', ['img']).on('change', () => reload());
+  gulp.watch('web/src/js/main.js', ['js']);
+  gulp.watch('web/src/scss/*.scss', ['sass']).on('change', () => reload());
+  gulp.watch('web/src/img/*', ['img']).on('change', () => reload());
 
   gulp.watch(['dist/index.php', 'dist/inc/**/*']).on('change', () => reload());
 });
 
 gulp.task('js', function() {
-  exec('parcel build src/js/main.js --out-dir dist/public/js', function (err, stdout, stderr) {
+  exec('parcel build web/src/js/main.js --out-dir dist/public/js', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     reload();
@@ -29,7 +29,7 @@ gulp.task('js', function() {
 }); 
 
 gulp.task('sass', function (done) {
-  return gulp.src('src/scss/*.scss')
+  return gulp.src('web/src/scss/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
@@ -49,7 +49,7 @@ gulp.task('sass', function (done) {
 });
 
 gulp.task('img', function (done) {
-    return gulp.src('src/img/*')
+    return gulp.src('web/src/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/public/img'));
 });
