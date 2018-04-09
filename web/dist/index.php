@@ -20,6 +20,10 @@ include 'inc/translations.php';
   <div id="page-wrapper">
     <div id="page-content">
       <div class="left">
+        <div class="gdpr-title">
+          <h1><?php echo $translations[$language]['gdpr'] ?></h1>
+          <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32016R0679" target="_blank">(See the original website &raquo;)</a>
+        </div>
         <div class="title">
           <h2><?php echo $translations[$language]['toc'] ?></h2>
         </div>
@@ -41,7 +45,7 @@ include 'inc/translations.php';
       <div class="right">
         <div class="gdpr-title">
           <h1><?php echo $translations[$language]['gdpr'] ?></h1>
-          <a href="#">(See the original website &raquo;)</a>
+          <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32016R0679" target="_blank">(See the original website &raquo;)</a>
         </div>
         <span class="border">
           <iframe src="" name="eurlex" id="eurlex" sandbox=""></iframe>
@@ -50,7 +54,7 @@ include 'inc/translations.php';
     </div>
     <div id="page-footer">
       <div class="brainsum-loves-gdpr">
-        <p>Made with<img src="public/img/icon_heart.svg" alt="Love" class="icon heart">by <a href="#">Brainsum</a></p>
+        <p>Made with<img src="public/img/icon_heart.svg" alt="Love" class="icon heart">by <a href="https://brainsum.com" target="_blank">Brainsum</a></p>
       </div>
     </div>
   </div>

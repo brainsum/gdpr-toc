@@ -14,16 +14,19 @@ functions.ready(() => {
 
     content.addEventListener('click', (event) => {
       if(event.target.tagName === 'A') {
-        let id = event.target.href.split('#')[1];
-        window.frames['eurlex'].location = event.target.href;
+
+        // If not mobile view open in IFRAME else open in new TAB
+        if(window.innerWidth > 1100) {
+          let id = event.target.href.split('#')[1];
+          window.frames['eurlex'].location = event.target.href;
+          event.preventDefault(); 
+          return false;
+        }
   
-        // Adding classes to links
+        // Adding classes to links for color
         removeClassFromAll('active');
         event.target.classList.add('active');
       }
-
-      event.preventDefault(); 
-      return false;
     });
 
     function removeClassFromAll(className) {
