@@ -50,7 +50,7 @@ include 'inc/translations.php';
     </div>
     <div id="page-footer">
       <div class="brainsum-loves-gdpr">
-        <p>Made with<img src="public/img/icon_heart.svg" alt="Love" class="icon heart">by Brainsum</p>
+        <p>Made with<img src="public/img/icon_heart.svg" alt="Love" class="icon heart">by <a href="#">Brainsum</a></p>
       </div>
     </div>
   </div>
