@@ -15,6 +15,12 @@ include 'inc/translations.php';
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?php echo $translations[$language]['title'] ?></title>
   <link rel="stylesheet" href="public/css/main.css">
+
+  <meta property="og:url" content="<?php echo BASE_URL; ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<?php echo $translations[$language]['title'] ?>">
+  <meta property="og:image" content="public/img/ogimage.png">
+  <meta property="og:description" content="Description Here">
 </head>
 <body id="page-main">
   <div id="page-wrapper">
@@ -48,7 +54,7 @@ include 'inc/translations.php';
           <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32016R0679" target="_blank">(See the original website &raquo;)</a>
         </div>
         <span class="border">
-          <iframe src="" name="eurlex" id="eurlex" sandbox=""></iframe>
+          <iframe src="" name="eurlex" id="eurlex" sandbox="" enable-annotation></iframe>
         </span>
       </div>
     </div>
@@ -60,5 +66,6 @@ include 'inc/translations.php';
   </div>
   <script>var GDPR = GDPR || {}; GDPR.lang = '<?php echo $language ?>'; GDPR.baseURL = '<?php echo BASE_URL ?>';</script>
   <script src="public/js/main.js"></script>
+  <script src="https://hypothes.is/embed.js" async></script>
 </body>
 </html>
