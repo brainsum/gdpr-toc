@@ -17,11 +17,11 @@ gulp.task('default', ['sync'], function() {
   gulp.watch('web/src/scss/*.scss', ['sass']).on('change', () => reload());
   gulp.watch('web/src/img/*', ['img']).on('change', () => reload());
 
-  gulp.watch(['dist/index.php', 'dist/inc/**/*']).on('change', () => reload());
+  gulp.watch(['web/dist/index.php', 'web/dist/inc/**/*']).on('change', () => reload());
 });
 
 gulp.task('js', function() {
-  exec('parcel build web/src/js/main.js --out-dir dist/public/js', function (err, stdout, stderr) {
+  exec('parcel build web/src/js/main.js --out-dir web/dist/public/js', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     reload();
@@ -45,13 +45,13 @@ gulp.task('sass', function (done) {
       }
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/public/css'));
+    .pipe(gulp.dest('web/dist/public/css'));
 });
 
 gulp.task('img', function (done) {
     return gulp.src('web/src/img/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/public/img'));
+        .pipe(gulp.dest('web/dist/public/img'));
 });
 
 gulp.task('sync', function() {
