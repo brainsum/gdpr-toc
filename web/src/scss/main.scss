@@ -10,9 +10,20 @@ body {
   font-size: 14px;
   height: 100%;
 }
-a {
+a,a:focus,a:active,a:visited {
   color: #042E90;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+a:hover {
+  color: lighten(#042E90, 30%) !important;
+}
+a.visited {
+  color: #9E9E9E;
+  transition: color 0.3s ease-in-out;
+}
+a.active {
+  color: lighten(#042E90, 30%);
 }
 h1,h2,h3,h4,h5 {
   font-family: "Raleway",sans-serif;
@@ -46,6 +57,7 @@ h2 {
       padding: 20px 0 0 20px;
       .gdpr-title {
         height: 10%;
+        text-align: center;
       }
       .border {
         width: 100%;
