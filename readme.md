@@ -10,13 +10,24 @@ This repository consists of two components. A scraper and a small website to pre
 
 To scrape you need NodeJS and to serve the site You require good old PHP. Currently the scraper gets the TOC content from files residing in "/toc-scraper/html" which are downloaded from the EU GDPR site as HTML format.
 
-## Deployment
+## Development
 
-### The scraper
+### Scraper
 - clone the repo
-- navigate to toc-scraper with a terminal
-- type node index
-- this creates the TOC files that will be included in the website ubder the folder "/web/dist/inc/parts"
+- navigate to the root directory from a terminal
+- type "npm run scrape"
+- this creates the TOC files that will be included in the website from the folder "/web/dist/inc/parts"
+
+### Website
+- clone the repo
+- serve the "web/dist" folder with a local LAMP server
+- in the gulpfile.js correct  the "proxy" URL to the URL you are serving 
+- navigate to the root directory from a terminal
+- type "npm run dev"
+- this will start a gulp process and open the browser
+- edit files in "web/src"
+
+## Deployment
 
 ### Website
 - copy "/web/dist" folder to your servers public directory.
@@ -25,4 +36,4 @@ To scrape you need NodeJS and to serve the site You require good old PHP. Curren
 
 ## Acknowledgments
 
-* Thanks to all the hard-working guys in the EU protecting our privacy!
+* Thanks to all the hard-working guys in the EU for protecting our privacy!
