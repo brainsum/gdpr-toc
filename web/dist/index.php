@@ -54,7 +54,7 @@ include 'inc/translations.php';
           <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32016R0679" target="_blank">(See the original website &raquo;)</a>
         </div>
         <span class="border">
-          <iframe src="" name="eurlex" id="eurlex" sandbox="" enable-annotation></iframe>
+          <iframe src="" name="eurlex" id="eurlex" sandbox=""></iframe>
         </span>
       </div>
     </div>
@@ -66,6 +66,5 @@ include 'inc/translations.php';
   </div>
   <script>var GDPR = GDPR || {}; GDPR.lang = '<?php echo $language ?>'; GDPR.baseURL = '<?php echo BASE_URL ?>';</script>
   <script src="public/js/main.js"></script>
-  <script src="https://hypothes.is/embed.js" async></script>
 </body>
 </html>
