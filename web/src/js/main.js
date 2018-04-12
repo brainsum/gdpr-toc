@@ -15,6 +15,10 @@ functions.ready(() => {
     content.addEventListener('click', (event) => {
       if(event.target.tagName === 'A') {
 
+        // Adding classes to links for color
+        removeClassFromAll('active');
+        event.target.classList.add('active');
+
         // If not mobile view open in IFRAME else open in new TAB
         if(window.innerWidth > 1100) {
           let id = event.target.href.split('#')[1];
@@ -22,10 +26,6 @@ functions.ready(() => {
           event.preventDefault(); 
           return false;
         }
-  
-        // Adding classes to links for color
-        removeClassFromAll('active');
-        event.target.classList.add('active');
       }
     });
 
