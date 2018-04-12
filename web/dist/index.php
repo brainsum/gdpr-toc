@@ -28,7 +28,7 @@ include 'inc/translations.php';
       <div class="left">
         <div class="gdpr-title">
           <h1><?php echo $translations[$language]['gdpr'] ?></h1>
-          <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32016R0679" target="_blank">(See the original website &raquo;)</a>
+          <a href="https://eur-lex.europa.eu/legal-content/<?php echo strtoupper($language); ?>/TXT/?uri=celex:32016R0679" target="_blank">(<?php echo $translations[$language]['original'] ?> &raquo;)</a>
         </div>
         <div class="title">
           <h2><?php echo $translations[$language]['toc'] ?></h2>
@@ -52,7 +52,7 @@ include 'inc/translations.php';
       <div class="right">
         <div class="gdpr-title">
           <h1><?php echo $translations[$language]['gdpr'] ?></h1>
-          <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32016R0679" target="_blank">(See the original website &raquo;)</a>
+          <a href="https://eur-lex.europa.eu/legal-content/<?php echo strtoupper($language); ?>/TXT/?uri=celex:32016R0679" target="_blank">(<?php echo $translations[$language]['original'] ?> &raquo;)</a>
         </div>
         <span class="border">
           <iframe src="" name="eurlex" id="eurlex" sandbox=""></iframe>
