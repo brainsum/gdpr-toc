@@ -43,14 +43,12 @@ class GDPR {
     });
   }
 
-  scrapeFile(filename) {
+  scrapeURL(url) {
 
     return new Promise((resolve, reject) => {
       
-      fs.readFile(path.join(__basedir, 'html', filename), 'utf-8', (err, data) => {
-
         // Scraping data
-        let scrape = scrapeIt.scrapeHTML(data, {
+        scrapeIt(url, {
             sections: {
               listItem: ".ti-section-1, .ti-art",
               data: {
@@ -70,10 +68,9 @@ class GDPR {
                 }
               }
             }
+        }, (err, { data }) => {
+          return (err) ? reject(err) : resolve(data);
         });
-
-        resolve(scrape);
-      });
     });
   }
 
