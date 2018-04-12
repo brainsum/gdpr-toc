@@ -67,5 +67,6 @@ include 'inc/translations.php';
   </div>
   <script>var GDPR = GDPR || {}; GDPR.lang = '<?php echo $language ?>'; GDPR.baseURL = '<?php echo BASE_URL ?>';</script>
   <script src="public/js/main.js"></script>
+  <?php echo $config['analytics']; ?>
 </body>
 </html>
