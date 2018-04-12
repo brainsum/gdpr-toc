@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const GDPR = require('./modules/gdpr');
 
-const languages = ['EN','HU'];
+const languages = ['EN','HU','DE'];
 const eusite = 'http://eur-lex.europa.eu/legal-content/{{lang}}/TXT/HTML/?uri=CELEX:32016R0679';
 global.__basedir = __dirname;
 

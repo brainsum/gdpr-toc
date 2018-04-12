@@ -37,8 +37,9 @@ include 'inc/translations.php';
           <form action="" method="post">
             <select name="languages" id="languages">
               <option value="0"><?php echo $translations[$language]['select_lang'] ?></option>
-              <option value="hu">HU</option>
               <option value="en">EN</option>
+              <option value="de">DE</option>
+              <option value="hu">HU</option>
             </select>
           </form>
         </div>

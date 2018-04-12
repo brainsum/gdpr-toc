@@ -6,7 +6,7 @@ const scrapeIt = require("scrape-it");
 class GDPR {
 
   constructor(language) {
-    this.languages = ['HU','EN'];
+    this.languages = ['HU','EN','DE'];
     this.language = (this.languages.indexOf(language) >= 0) ? language : 'HU';
     this.names = {
       EN: {
@@ -18,29 +18,14 @@ class GDPR {
         chapter:'fejezet',
         section:'szakasz',
         article:'cikk'
+      },
+      DE: {
+        chapter:'kapitel',
+        section:'abschnitt',
+        article:'artikel'
       }
     }
     this.url = 'https://eur-lex.europa.eu/legal-content/' + this.language + '/TXT/?uri=celex:32016R0679';
-  }
-
-  findLanguageFile(lang) {
-
-    return new Promise((resolve, reject) => {
-      fs.readdir(path.join(__basedir, 'html'), (err, files) => {
-
-        if(err) {
-          reject('File not found');
-          return;
-        }
-
-        files.forEach((file) => {
-          if(file.indexOf(lang) >= 0) {
-            resolve(file);
-            return;
-          }
-        });
-      });
-    });
   }
 
   scrapeURL(url) {
@@ -161,14 +146,7 @@ class GDPR {
 
     return toclist;
   }
-
-  optionsFromArray() {
-    let options = '';
-    this.languages.forEach((language) => {
-      options += `<option value="${language}">${language}</option>`
-    });
-    return options;
-  }
+  
 }
 
 module.exports = GDPR;
