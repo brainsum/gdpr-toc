@@ -60,6 +60,7 @@ h2 {
       }
       .gdpr-title {
         height: 10%;
+        min-height: 85px;
         text-align: center;
       }
       .border {
@@ -132,11 +133,13 @@ h2 {
   }
   #page-footer {
     height: 5%;
+    min-height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 15px;
     border-top:2px solid #f8ca01;
+    overflow: hidden;
     .brainsum-loves-gdpr {
       .icon {
         display: inline-block;
