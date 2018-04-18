@@ -28,7 +28,7 @@ include 'inc/translations.php';
       <div class="left">
         <div class="gdpr-title">
           <h1><?php echo $translations[$language]['gdpr'] ?></h1>
-          <a href="https://eur-lex.europa.eu/legal-content/<?php echo strtoupper($language); ?>/TXT/?uri=celex:32016R0679" target="_blank">(<?php echo $translations[$language]['original'] ?> &raquo;)</a>
+          <a href="https://eur-lex.europa.eu/legal-content/<?php echo strtoupper($language); ?>/TXT/?uri=celex:32016R0679" target="_blank" data-title-en="<?php echo $translations['en']['original'] ?>">(<?php echo $translations[$language]['original'] ?> &raquo;)</a>
         </div>
         <div class="title">
           <h2><?php echo $translations[$language]['toc'] ?></h2>
@@ -52,7 +52,7 @@ include 'inc/translations.php';
       <div class="right">
         <div class="gdpr-title">
           <h1><?php echo $translations[$language]['gdpr'] ?></h1>
-          <a href="https://eur-lex.europa.eu/legal-content/<?php echo strtoupper($language); ?>/TXT/?uri=celex:32016R0679" target="_blank">(<?php echo $translations[$language]['original'] ?> &raquo;)</a>
+          <a href="https://eur-lex.europa.eu/legal-content/<?php echo strtoupper($language); ?>/TXT/?uri=celex:32016R0679" target="_blank" data-title-en="<?php echo $translations['en']['original'] ?>">(<?php echo $translations[$language]['original'] ?> &raquo;)</a>
         </div>
         <span class="border">
           <iframe src="" name="eurlex" id="eurlex" sandbox=""></iframe>
@@ -61,7 +61,7 @@ include 'inc/translations.php';
     </div>
     <div id="page-footer">
       <div class="brainsum-loves-gdpr">
-        <p>Made with<img src="public/img/icon_heart.svg" alt="Love" class="icon heart">by <a href="https://brainsum.com" target="_blank">Brainsum</a></p>
+        <p>Made with<img src="public/img/icon_heart.svg" alt="Love" class="icon heart">by <a href="https://brainsum.com" target="_blank" data-title-en="Brainsum">Brainsum</a></p>
       </div>
     </div>
   </div>
