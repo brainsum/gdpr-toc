@@ -6,7 +6,7 @@ functions.ready(() => {
   const lang = window.GDPR.lang.toUpperCase();
   const baseURL = window.GDPR.baseURL;
 
-  window.frames['eurlex'].location = 'https://eur-lex.europa.eu/legal-content/' + lang + '/TXT/?uri=celex:32016R0679';
+  window.frames['eurlex'].location = 'https://eur-lex.europa.eu/legal-content/' + lang + '/TXT/?uri=CELEX:32016R0679';
 
   // TOC link clicks
   (function () {
