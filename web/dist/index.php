@@ -63,7 +63,7 @@ include 'inc/translations.php';
       <div class="brainsum-loves-gdpr">
         <ul>
           <li>Made with<img src="public/img/icon_heart.svg" alt="Love" class="icon heart">by <a href="https://brainsum.com" target="_blank" data-title-en="Brainsum">Brainsum</a><span>|</span></li>
-          <li><img src="public/img/icon_octocat_low.svg" alt="Github" class="icon github"> <a href="https://github.com/brainsum/gdpr-toc" target="_blank" data-title-en="Brainsum">Github</a></li>
+          <li><img src="public/img/icon_octocat_low.svg" alt="Github" class="icon github"> <a href="https://github.com/brainsum/gdpr-toc" target="_blank" data-title-en="Github">Github</a></li>
         </ul>
       </div>
     </div>
