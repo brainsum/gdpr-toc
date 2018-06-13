@@ -62,7 +62,7 @@ class GDPR {
       },
       GA: {
         chapter:'caibidil',
-        section:'roinn',
+        section:['roinn','cuid'],
         article:'airteagal'
       },
       HR: {
@@ -203,17 +203,28 @@ class GDPR {
       let structuredContent = {};
       structuredContent.language = scrapedData.language;
       structuredContent.chapters = {};
+
+      function includes(item, what) {
+        if(Array.isArray(what)) {
+          for(let searchString of what) {
+            if(item.toLowerCase().includes(searchString)) return true;
+          }
+        } else {
+          return item.toLowerCase().includes(what)
+        }
+        return false;
+      }
   
       for (let i = 0; i < tocObject.length; i++) {
         let type = tocObject[i].type;
-        if(type.toLowerCase().indexOf(this.names[scrapedData.language].chapter) >= 0) {
+        if(includes(type.toLowerCase(), this.names[scrapedData.language].chapter)) {
           structuredContent.chapters[i] = {
             name : `${type} - ${tocObject[i].title}`,
             id: tocObject[i].id
           }
           chapterId = i;
           sectionId = null;
-        } else if(type.toLowerCase().indexOf(this.names[scrapedData.language].section) >= 0) {
+        } else if(includes(type.toLowerCase(), this.names[scrapedData.language].section)) {
           sectionId = i;
           structuredContent.chapters[chapterId]['sections'] = structuredContent.chapters[chapterId]['sections'] || {};
           structuredContent.chapters[chapterId]['sections'][sectionId] = {
@@ -250,7 +261,6 @@ class GDPR {
       });
 
       Promise.all(structurePromises).then((structuredDatas) => {
-        this.addEnglishTitles(structuredDatas);
         return resolve(structuredDatas);
       }).catch((error) => {
         return reject(error);
@@ -258,18 +268,8 @@ class GDPR {
     });
   }
 
-  addEnglishTitles(structuredDatas) {
-    let structuredDataEN = structuredDatas.filter(structuredData => structuredData.language === 'EN');
-
-    structuredDatas.forEach((structuredData) => {
-      
-    });
-  }
-
   createTOC(structuredData) {
-    console.log(structuredData.language);
     return new Promise((resolve, reject) => {
-
       let href = `https://${this.url.replace('{{lang}}', structuredData.language).replace('TXT/HTML', 'TXT')}`;
 
       // Converting the list to HTML
@@ -301,7 +301,9 @@ class GDPR {
                 for (let articleId in section.articles) {
                   let article = section.articles[articleId];
                   let articleEN = sectionEN.articles[articleId];
-                  
+                  if( ! articleEN) {
+                    reject(section);
+                  }
                   toclist += `<li><a href="${href}#${article.id}" target="_blank" data-title-en="${articleEN.title} - (${articleEN.type})">${article.title} - (${article.type})</a></li>\n`;
                 }
                 toclist += '</ul>\n';
@@ -326,7 +328,6 @@ class GDPR {
       let tocPromises = [];
 
       structuredDatas.forEach((structuredData,i) => {
-        console.log(i)
         tocPromises.push(this.createTOC(structuredData));
       });
 
