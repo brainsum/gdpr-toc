@@ -15,14 +15,119 @@ class GDPR {
         section:'section',
         article:'article'
       },
+      DE: {
+        chapter:'kapitel',
+        section:'abschnitt',
+        article:'artikel'
+      },
       HU: {
         chapter:'fejezet',
         section:'szakasz',
         article:'cikk'
       },
-      DE: {
+      BG: {
+        chapter:'глава',
+        section:'раздел',
+        article:'член'
+      },
+      ES: {
+        chapter:'capítulo',
+        section:'sección',
+        article:'artículo'
+      },
+      CS: {
+        chapter:'kapitola',
+        section:'oddíl',
+        article:'článek'
+      },
+      DA: {
         chapter:'kapitel',
-        section:'abschnitt',
+        section:'afdeling',
+        article:'artikel'
+      },
+      ET: {
+        chapter:'peatükk',
+        section:'jagu',
+        article:'artikkel'
+      },
+      EL: {
+        chapter:'κεφαλαιο',
+        section:'τμήμα',
+        article:'άρθρο'
+      },
+      FR: {
+        chapter:'chapitre',
+        section:'section',
+        article:'article'
+      },
+      GA: {
+        chapter:'caibidil',
+        section:'roinn',
+        article:'airteagal'
+      },
+      HR: {
+        chapter:'poglavlje',
+        section:'odjeljak',
+        article:'članak'
+      },
+      IT: {
+        chapter:'capo',
+        section:'sezione',
+        article:'articolo'
+      },
+      LV: {
+        chapter:'nodaļa',
+        section:'iedaļa',
+        article:'pants'
+      },
+      LT: {
+        chapter:'skyrius',
+        section:'skirsnis',
+        article:'straipsnis'
+      },
+      MT: {
+        chapter:'kapitolu',
+        section:'taqsima',
+        article:'artikolu'
+      },
+      NL: {
+        chapter:'hoofdstuk',
+        section:'afdeling',
+        article:'artikel'
+      },
+      PL: {
+        chapter:'rozdział',
+        section:'sekcja',
+        article:'artykuł'
+      },
+      PT: {
+        chapter:'capítulo',
+        section:'secção',
+        article:'artigo'
+      },
+      RO: {
+        chapter:'capitolul',
+        section:'secțiunea',
+        article:'articolul'
+      },
+      SK: {
+        chapter:'kapitola',
+        section:'oddiel',
+        article:'článok'
+      },
+      SL: {
+        chapter:'poglavje',
+        section:'oddelek',
+        article:'člen'
+      },
+      FI: {
+        chapter:'luku',
+        section:'jakso',
+        article:'artikla'
+      },
+      SV: {
+        chapter:'kapitel',
+        section:'avsnitt',
         article:'artikel'
       }
     }
@@ -162,7 +267,7 @@ class GDPR {
   }
 
   createTOC(structuredData) {
-
+    console.log(structuredData.language);
     return new Promise((resolve, reject) => {
 
       let href = `https://${this.url.replace('{{lang}}', structuredData.language).replace('TXT/HTML', 'TXT')}`;
@@ -171,6 +276,7 @@ class GDPR {
       let toclist = '<ul>\n';
   
       for (let chapterId in structuredData.chapters) {
+        
         let chapter   = structuredData.chapters[chapterId];
         let chapterEN = this.structuredEnData.chapters[chapterId];
         toclist += `<li><a href="${href}#${chapter.id}" target="_blank" data-title-en="${chapterEN.name}">${chapter.name}</a>\n`;
@@ -195,6 +301,7 @@ class GDPR {
                 for (let articleId in section.articles) {
                   let article = section.articles[articleId];
                   let articleEN = sectionEN.articles[articleId];
+                  
                   toclist += `<li><a href="${href}#${article.id}" target="_blank" data-title-en="${articleEN.title} - (${articleEN.type})">${article.title} - (${article.type})</a></li>\n`;
                 }
                 toclist += '</ul>\n';
@@ -205,7 +312,7 @@ class GDPR {
           }
         toclist += '</li>\n';
       }
-  
+
       toclist += '</ul>\n';
   
       resolve({language:structuredData.language, toclist:toclist});
@@ -218,7 +325,8 @@ class GDPR {
 
       let tocPromises = [];
 
-      structuredDatas.forEach((structuredData) => {
+      structuredDatas.forEach((structuredData,i) => {
+        console.log(i)
         tocPromises.push(this.createTOC(structuredData));
       });
 
