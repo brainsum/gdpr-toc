@@ -126,8 +126,19 @@ h2 {
           border-radius: 16px;
           margin-bottom: 3px;
         }
-        .ss-search {
-          display: none;
+        .ss-main .ss-content .ss-list {
+          .ss-optgroup {
+            padding: 5px 0;
+          }
+          .ss-optgroup:first-child {
+            border-bottom: 1px solid #E1E1E1;
+          }
+          .ss-optgroup .ss-option {
+            padding: 6px 10px;
+          }
+          .ss-optgroup .ss-optgroup-label {
+            padding: 0
+          }
         }
         form {
           width: 50%;
