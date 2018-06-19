@@ -44,6 +44,7 @@ functions.ready(() => {
   var select = new SlimSelect({
     select: '#languages',
     showSearch: false,
+    placeholder: 'Select a language',
     onChange: (data) => {
       if(data.value !== lang.toLowerCase()) {
         window.location.replace(baseURL + data.value);
@@ -52,13 +53,5 @@ functions.ready(() => {
   });
 
   select.set(lang.toLowerCase());
-
-  // Language selector
-  let languageSelect = document.getElementById('languages');
-
-  languageSelect.addEventListener('input', (event) => {
-    console.log(event.target.value, );
-    window.location.replace(baseURL + event.target.value);
-  });
 });
 

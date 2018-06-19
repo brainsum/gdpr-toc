@@ -35,17 +35,9 @@ include 'inc/translations.php';
         <div id="gdpr-lang">
           <form action="" method="post">
             <select name="languages" id="languages">
-              <optgroup>
-                <option value="en">EN</option>
-                <option value="de">DE</option>
-                <option value="hu">HU</option>
-                <option value="sk">SK</option>
-              </optgroup>
-              <optgroup>
-                <?php foreach($config['languages'] as $lang): ?>
-                <option value="<?php echo $lang ?>"><?php echo strtoupper($lang) ?></option>
-                <?php endforeach; ?>
-              </optgroup>
+              <?php foreach($config['languages'] as $lang): ?>
+              <option value="<?php echo $lang ?>"><?php echo strtoupper($lang) ?></option>
+              <?php endforeach; ?>
             </select>
           </form>
         </div>
