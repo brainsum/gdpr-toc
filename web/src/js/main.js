@@ -43,6 +43,7 @@ functions.ready(() => {
   // Slim select
   var select = new SlimSelect({
     select: '#languages',
+    showSearch: false,
     onChange: (data) => {
       if(data.value !== lang.toLowerCase()) {
         window.location.replace(baseURL + data.value);
