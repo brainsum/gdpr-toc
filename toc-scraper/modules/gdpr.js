@@ -286,7 +286,7 @@ class GDPR {
               let article   = chapter.articles[articleId];
               let articleEN = chapterEN.articles[articleId];
 
-              toclist += `<li><a href="${href}#${article.id}" target="_blank" data-title-en="${articleEN.title} - (${articleEN.type})">${article.title} - (${article.type})</a></li>\n`;
+              toclist += `<li><a href="${href}#${article.id}" target="_blank" data-title-en="${articleEN.title} - (${articleEN.type})">${article.title} - <span>(${article.type})</span></a></li>\n`;
             }
             toclist += '</ul>\n';
           }
@@ -304,7 +304,7 @@ class GDPR {
                   if( ! articleEN) {
                     reject(section);
                   }
-                  toclist += `<li><a href="${href}#${article.id}" target="_blank" data-title-en="${articleEN.title} - (${articleEN.type})">${article.title} - (${article.type})</a></li>\n`;
+                  toclist += `<li><a href="${href}#${article.id}" target="_blank" data-title-en="${articleEN.title} - (${articleEN.type})">${article.title} - <span>(${article.type})</span></a></li>\n`;
                 }
                 toclist += '</ul>\n';
               }

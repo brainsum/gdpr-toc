@@ -1,4 +1,5 @@
 import functions from './functions';
+import SlimSelect from 'slim-select'
 
 
 functions.ready(() => {
@@ -38,6 +39,18 @@ functions.ready(() => {
       });
     }
   })();
+
+  // Slim select
+  var select = new SlimSelect({
+    select: '#languages',
+    onChange: (data) => {
+      if(data.value !== lang.toLowerCase()) {
+        window.location.replace(baseURL + data.value);
+      }
+    }
+  });
+
+  select.set(lang.toLowerCase());
 
   // Language selector
   let languageSelect = document.getElementById('languages');

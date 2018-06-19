@@ -28,7 +28,6 @@ include 'inc/translations.php';
       <div class="left">
         <div class="gdpr-title">
           <h1><?php echo $translations[$language]['gdpr'] ?></h1>
-          <a href="https://eur-lex.europa.eu/legal-content/<?php echo strtoupper($language); ?>/TXT/?uri=celex:32016R0679" target="_blank" data-title-en="<?php echo $translations['en']['original'] ?>">(<?php echo $translations[$language]['original'] ?> &raquo;)</a>
         </div>
         <div class="title">
           <h2><?php echo $translations[$language]['toc'] ?></h2>
@@ -36,10 +35,13 @@ include 'inc/translations.php';
         <div id="gdpr-lang">
           <form action="" method="post">
             <select name="languages" id="languages">
-              <option value="0"><?php echo $translations[$language]['select_lang'] ?></option>
               <option value="en">EN</option>
               <option value="de">DE</option>
               <option value="hu">HU</option>
+              <option value="sk">SK</option>
+              <?php foreach($config['languages'] as $lang): ?>
+              <option value="<?php echo $lang ?>"><?php echo strtoupper($lang) ?></option>
+              <?php endforeach; ?>
             </select>
           </form>
         </div>
@@ -51,8 +53,7 @@ include 'inc/translations.php';
       </div>
       <div class="right">
         <div class="gdpr-title">
-          <h1><?php echo $translations[$language]['gdpr'] ?></h1>
-          <a href="https://eur-lex.europa.eu/legal-content/<?php echo strtoupper($language); ?>/TXT/?uri=celex:32016R0679" target="_blank" data-title-en="<?php echo $translations['en']['original'] ?>">(<?php echo $translations[$language]['original'] ?> &raquo;)</a>
+          <p><?php echo sprintf($translations[$language]['original'], sprintf('https://eur-lex.europa.eu/legal-content/%s/TXT/?uri=celex:32016R0679', strtoupper($language))) ?></p>
         </div>
         <span class="border">
           <iframe src="" name="eurlex" id="eurlex" sandbox=""></iframe>
@@ -62,8 +63,8 @@ include 'inc/translations.php';
     <div id="page-footer">
       <div class="brainsum-loves-gdpr">
         <ul>
-          <li>Made with<img src="public/img/icon_heart.svg" alt="Love" class="icon heart">by <a href="https://brainsum.com" target="_blank" data-title-en="Brainsum">Brainsum</a><span>|</span></li>
-          <li><img src="public/img/icon_octocat_low.svg" alt="Github" class="icon github"> <a href="https://github.com/brainsum/gdpr-toc" target="_blank" data-title-en="Github">Github</a></li>
+          <li>Made with<img src="public/img/icon_heart.svg" alt="Love" class="icon heart">by <a href="https://brainsum.com" target="_blank" data-title-en="Brainsum footer link">Brainsum</a><span>|</span></li>
+          <li><img src="public/img/icon_octocat_low.svg" alt="Github" class="icon github"> <a href="https://github.com/brainsum/gdpr-toc" target="_blank" data-title-en="Github footer link">Github</a></li>
         </ul>
       </div>
     </div>

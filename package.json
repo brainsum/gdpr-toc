@@ -24,5 +24,8 @@
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "scrape-it": "^5.0.5"
+  },
+  "dependencies": {
+    "slim-select": "^1.15.1"
   }
 }
