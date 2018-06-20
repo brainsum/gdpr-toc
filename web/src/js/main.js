@@ -1,11 +1,13 @@
+import Language from './languages';
 import functions from './functions';
-import SlimSelect from 'slim-select'
+import SlimSelect from 'slim-select';
+
+
+const lang = window.GDPR.lang.toUpperCase();
+const baseURL = window.GDPR.baseURL;
 
 
 functions.ready(() => {
-
-  const lang = window.GDPR.lang.toUpperCase();
-  const baseURL = window.GDPR.baseURL;
 
   window.frames['eurlex'].location = 'https://eur-lex.europa.eu/legal-content/' + lang + '/TXT/?uri=CELEX:32016R0679';
 
@@ -53,5 +55,28 @@ functions.ready(() => {
   });
 
   select.set(lang.toLowerCase());
+});
+
+// Cookie notice
+functions.ready(() => {
+
+  let cookieBar =`<div id="cooki-bar">
+    <div class="content">
+      <div class="left">${Language.get('cookieNotice', lang)}</div>
+      <div class="right">
+        <button>${Language.get('accept', lang)}</button>
+      </div>
+    </div>
+  <div>`;
+
+  document.body.insertAdjacentHTML('beforeend', cookieBar)
+
+
+  let templates = document.querySelectorAll('template.cookie-accept');
+
+  Array.prototype.forEach.call(templates, (elem) => {
+    elem.insertAdjacentHTML('beforebegin', elem.innerHTML);
+    elem.parentNode.removeChild(elem);    
+  })
 });
 

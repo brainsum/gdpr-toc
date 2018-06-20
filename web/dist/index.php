@@ -21,6 +21,15 @@ include 'inc/translations.php';
   <meta property="og:title" content="<?php echo $translations[$language]['title'] ?>">
   <meta property="og:image" content="public/img/ogimage.png">
   <meta property="og:description" content="Description Here">
+  <template class="cookie-accept">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','<?php echo $config['GTM'] ?>');</script>
+  <!-- End Google Tag Manager -->
+  </template>
 </head>
 <body id="page-main">
   <div id="page-wrapper">
@@ -67,6 +76,11 @@ include 'inc/translations.php';
   </div>
   <script>var GDPR = GDPR || {}; GDPR.lang = '<?php echo $language ?>'; GDPR.baseURL = '<?php echo BASE_URL ?>';</script>
   <script src="public/js/main.js"></script>
-  <?php echo $config['analytics']; ?>
+  <template class="cookie-accept">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $config['GTM'] ?>"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  </div>
 </body>
 </html>
