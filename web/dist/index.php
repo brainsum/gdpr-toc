@@ -14,13 +14,14 @@ include 'inc/translations.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?php echo $translations[$language]['title'] ?></title>
+  <meta name="description" content="<?php echo $translations[$language]['description'] ?>">
   <link rel="stylesheet" href="public/css/main.css">
 
   <meta property="og:url" content="<?php echo BASE_URL; ?>">
   <meta property="og:type" content="website">
   <meta property="og:title" content="<?php echo $translations[$language]['title'] ?>">
   <meta property="og:image" content="public/img/ogimage.png">
-  <meta property="og:description" content="Description Here">
+  <meta property="og:description" content="<?php echo $translations[$language]['description'] ?>">
   <?php if(! empty($config['GTM'])): ?>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

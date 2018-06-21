@@ -3,6 +3,7 @@
 $translations = [
   'en' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -11,6 +12,7 @@ $translations = [
   ],
   'de' => [
     'title' => 'GDPR Inhaltsverzeichnis',
+    'description' => 'EU DSGVO (Allgemeine Datenschutzverordnung GDPR) Inhaltsverzeichnis basierend auf der offiziellen Live-Seite.',
     'gdpr' => 'VERORDNUNG (EU) 2016/679 DES EUROPÄISCHEN PARLAMENTS UND DES RATES',
     'original' => 'Die folgende Seite ist die <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">offizielle Seite</a> der Verordnung',
     'toc' => 'GDPR - Inhaltsverzeichnis',
@@ -19,6 +21,7 @@ $translations = [
   ],
   'hu' => [
     'title' => 'GDPR Tartalomjegyzék',
+    'description' => 'EU GDPR (Általános adatvédelmi szabályzat) Tartalomjegyzék az élő, hivatalos oldal alapján.',
     'gdpr' => 'AZ EURÓPAI PARLAMENT ÉS A TANÁCS (EU) 2016/679 RENDELETE',
     'original' => 'Az alábbi oldal a rendelet <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">hivatalos oldala</a>',
     'toc' => 'GDPR - Tartalomjegyzék',
@@ -27,6 +30,7 @@ $translations = [
   ],
   'bg' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -35,6 +39,7 @@ $translations = [
   ],
   'es' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -43,6 +48,7 @@ $translations = [
   ],
   'cs' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -51,6 +57,7 @@ $translations = [
   ],
   'da' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -59,6 +66,7 @@ $translations = [
   ],
   'et' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -67,6 +75,7 @@ $translations = [
   ],
   'el' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -75,6 +84,7 @@ $translations = [
   ],
   'fr' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -83,6 +93,7 @@ $translations = [
   ],
   'ga' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -91,6 +102,7 @@ $translations = [
   ],
   'hr' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -99,6 +111,7 @@ $translations = [
   ],
   'it' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -107,6 +120,7 @@ $translations = [
   ],
   'lv' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -115,6 +129,7 @@ $translations = [
   ],
   'lt' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -123,6 +138,7 @@ $translations = [
   ],
   'mt' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -131,6 +147,7 @@ $translations = [
   ],
   'nl' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -139,6 +156,7 @@ $translations = [
   ],
   'pl' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -147,6 +165,7 @@ $translations = [
   ],
   'pt' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -155,6 +174,7 @@ $translations = [
   ],
   'ro' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -163,6 +183,7 @@ $translations = [
   ],
   'sk' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -171,6 +192,7 @@ $translations = [
   ],
   'sl' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -179,6 +201,7 @@ $translations = [
   ],
   'fi' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
@@ -187,6 +210,7 @@ $translations = [
   ],
   'sv' => [
     'title' => 'GDPR Table of Contents',
+    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
     'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
     'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
     'toc' => 'GDPR - Table of Contents',
