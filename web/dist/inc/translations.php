@@ -182,13 +182,13 @@ $translations = [
     'select_lang' => 'Select a language'
   ],
   'sk' => [
-    'title' => 'GDPR Table of Contents',
-    'description' => 'EU GDPR (General Data Protection Regulation) Table of Contents based on the live official page.',
-    'gdpr' => 'REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL',
-    'original' => 'The page below is the <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">official page</a> of the regulation',
-    'toc' => 'GDPR - Table of Contents',
-    'languages' => 'Languages',
-    'select_lang' => 'Select a language'
+    'title' => 'GDPR Obsah',
+    'description' => 'EU GDPR (nariadenie o všeobecnej ochrane údajov) Obsah založený na oficiálnej stránke.',
+    'gdpr' => 'NARIADENIE EURÓPSKEHO PARLAMENTU A RADY (EÚ) 2016/679',
+    'original' => 'Nasledujúca stránka je <a href="%s" target="_blank" rel="noopener noreferrer" data-title-en="Link to official page">oficiálna stránka</a> nariadenia',
+    'toc' => 'GDPR Obsah',
+    'languages' => 'Jazyky',
+    'select_lang' => 'Vyberte jazyk'
   ],
   'sl' => [
     'title' => 'GDPR Table of Contents',

@@ -24,7 +24,12 @@ const languages = {
   hu: {
     accept: 'Elfogadom',
     iUnderstand: 'Megértettem',
-    cookieNotice: "Az oldal sütiket használ a jobb böngészési élmény és szolgáltatások érdekében. Ha folytatja a böngészést, az esetben beleegyezik, hogy használjuk ezeket a sütiket." 
+    cookieNotice: "Az oldal sütiket használ a jobb böngészési élmény és szolgáltatások érdekében. Amennyiben folytatja a böngészést, abban az esetben beleegyezik, hogy használjuk ezeket." 
+  },
+  sk: {
+    accept: 'Akceptujem',
+    iUnderstand: 'Súhlasím',
+    cookieNotice: "Nasa stránka používa cookies, ktoré nám pomáhajú zabezpečiť lepšie služby. Ak budete pokračovať v prehliadaní tejto stránky, súhlasíte s použitím cookies." 
   }
 };
 
