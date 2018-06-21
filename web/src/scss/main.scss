@@ -70,8 +70,8 @@ h2 {
     .right {
       float: right;
       button {
-        background-color: #EFD518;
-        color: #143557;
+        background-color: #306AB1;
+        color: #FFFFFF;
         font-weight: 600;
         cursor: pointer;
         border: none;
@@ -79,7 +79,7 @@ h2 {
         transition: background-color .3s ease-in-out;
       }
       button:hover {
-        background-color: darken(#EFD518, 5%);
+        background-color: darken(#306AB1, 5%);
       }
     }
   }
