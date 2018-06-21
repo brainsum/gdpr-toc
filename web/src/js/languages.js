@@ -18,11 +18,13 @@ Language.get = function(phrase, lang) {
 const languages = {
   en: {
     accept: 'Accept',
-    cookieNotice: "We use cookies to provide a better browsing experience and a more personalized service. We do not store any personal information. If you continue browsing, we consider accepting its use." 
+    iUnderstand: 'I Understand',
+    cookieNotice: "We use cookies to provide a better browsing experience and service. If you continue browsing, You agree to our use of cookies." 
   },
   hu: {
     accept: 'Elfogadom',
-    cookieNotice: "Az oldal sütiket használ a jobb böngészési élmény és a személyre szabottabb szolgáltatások érdekében. Személyes adatokat nem tárolunk. Ha folytatja a böngészést, az esetben fontolóra vesszük ezek használatát." 
+    iUnderstand: 'Megértettem',
+    cookieNotice: "Az oldal sütiket használ a jobb böngészési élmény és szolgáltatások érdekében. Ha folytatja a böngészést, az esetben beleegyezik, hogy használjuk ezeket a sütiket." 
   }
 };
 

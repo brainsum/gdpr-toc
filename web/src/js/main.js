@@ -60,23 +60,29 @@ functions.ready(() => {
 // Cookie notice
 functions.ready(() => {
 
-  let cookieBar =`<div id="cooki-bar">
+  if(document.cookie.includes('cookie=1')) return;
+
+  let cookieBarMarkup =`<div id="cookie-bar">
     <div class="content">
       <div class="left">${Language.get('cookieNotice', lang)}</div>
       <div class="right">
-        <button>${Language.get('accept', lang)}</button>
+        <button id="cookie-bar-accept">${Language.get('iUnderstand', lang)}</button>
       </div>
     </div>
   <div>`;
 
-  document.body.insertAdjacentHTML('beforeend', cookieBar)
+  document.body.insertAdjacentHTML('beforeend', cookieBarMarkup);
+  
+  let cookieBar = document.getElementById('cookie-bar');
+  
+  setTimeout(() => {
+    cookieBar.classList.add('active')
+  }, 3000);
 
+  document.getElementById('cookie-bar-accept').addEventListener('click', (event) => {
+    cookieBar.classList.remove('active');
+    document.cookie = 'cookie=1';
+  });
 
-  let templates = document.querySelectorAll('template.cookie-accept');
-
-  Array.prototype.forEach.call(templates, (elem) => {
-    elem.insertAdjacentHTML('beforebegin', elem.innerHTML);
-    elem.parentNode.removeChild(elem);    
-  })
 });
 
