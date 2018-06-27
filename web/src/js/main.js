@@ -81,7 +81,7 @@ functions.ready(() => {
 
   document.getElementById('cookie-bar-accept').addEventListener('click', (event) => {
     cookieBar.classList.remove('active');
-    document.cookie = 'cookie=1';
+    document.cookie = 'cookie=1; expires=' + new Date(new Date().getTime() + (365 * 24 * 60 * 60 * 1000)).toUTCString();
   });
 
 });
