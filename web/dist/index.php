@@ -43,6 +43,7 @@ include 'inc/translations.php';
           <h2><?php echo $translations[$language]['toc'] ?></h2>
         </div>
         <div id="gdpr-lang">
+          <?php sort($config['languages']); ?>
           <form action="" method="post">
             <select name="languages" id="languages">
               <?php foreach($config['languages'] as $lang): ?>
