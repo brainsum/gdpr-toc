@@ -17,7 +17,7 @@ include 'inc/translations.php';
   <meta name="description" content="<?php echo $translations[$language]['description'] ?>">
   <link rel="stylesheet" href="public/css/main.css">
 
-  <meta property="og:url" content="<?php echo BASE_URL; ?>">
+  <meta property="og:url" content="<?php echo BASE_URL . ltrim($_SERVER['REQUEST_URI'], '/'); ?>">
   <meta property="og:type" content="website">
   <meta property="og:title" content="<?php echo $translations[$language]['title'] ?>">
   <meta property="og:image" content="public/img/ogimage.png">
